@@ -28,7 +28,7 @@
         </div>
         <div id="signup" class="container-fluid">
             <img class="bg" src="images/5.png" alt="">
-            <div class="row">
+            <div class="row signup-section">
                 <div class="col-md-6 col-xs-12">
                     <h2>For Customers</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec iaculis enim.</p>
@@ -38,7 +38,7 @@
                     <img src="images/7.png" alt="">
                 </div>
             </div>
-            <div class="row">
+            <div class="row signup-section">
                 <div class="col-md-6 hidden-sm hidden-xs">
                     <img src="images/6.png" alt="">
                 </div>
@@ -51,8 +51,8 @@
         </div>
         <div id="testimonials" class="fluid-container">
             <img class="bg" src="images/8.png" alt="">
-            <h2>What our Customers Say</h2>
-            <div class="row">
+            <h2 id="testi-text">What our Customers Say</h2>
+            <div class="row testi">
                 <div class="col-md-4 col-xs-12">
                     <img class="testi-img" src="https://source.unsplash.com/200x200/?man" alt="">
                     <h4>Crystal Buckner</h4>
@@ -82,6 +82,22 @@ export default {
         Button,
     }
 }
+
+window.addEventListener("scroll",function() { 
+   $('#about-text')[(window.scrollY > 500)?"fadeIn":"fadeOut"]();
+   $('#fruits')[(window.scrollY > 500)?"fadeIn":"fadeOut"]();
+},false);
+window.addEventListener("scroll",function() { 
+   $('#contact-text')[(window.scrollY > 1200)?"fadeIn":"fadeOut"]();
+   $('#map-container')[(window.scrollY > 1200)?"fadeIn":"fadeOut"]();
+},false);
+window.addEventListener("scroll",function() { 
+   $('.signup-section')[(window.scrollY > 2200)?"fadeIn":"fadeOut"]();
+},false);
+window.addEventListener("scroll",function() { 
+   $('.testi')[(window.scrollY > 3200)?"fadeIn":"fadeOut"]();
+},false);
+
 </script>
 
 <style scoped>
