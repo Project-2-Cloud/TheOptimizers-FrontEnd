@@ -1,8 +1,8 @@
 <template>
-    <a>
+    <div id="link">
         <p>{{ minor }}</p>
         <h5>{{ text }}</h5>
-    </a>
+    </div>
 </template>
 
 <script>
@@ -16,18 +16,19 @@ export default {
 </script>
 
 <style scoped>
-a {
+#link {
     float: right;
     color: green;
     text-decoration: none;
     margin-right: 2.5vw;
     margin-top: 3vh;
+    cursor: pointer;
 }
-h5 {
+#link h5 {
     font-size: 2vh;
     margin: 0;
 }
-p {
+#link p {
     font-size: 1.5vh;
     margin: 0;
 }

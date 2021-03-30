@@ -7,7 +7,7 @@
                     <p>&#8226; Create a New Account</p>
                     <p>&#8226; Log-In into your Account</p>
                     <p>&#8226; View Products</p>
-                    <p>&#8226; Gardening Workshops</p>
+                    <p @click="$emit('workshop')">&#8226; Gardening Workshops</p>
                     <p>&#8226; Checkout</p>
                 </div>
             </div>
@@ -74,6 +74,7 @@ p {
     font-size: 1vw;
     font-weight: 400;
     margin-left: 1vw;
+    cursor: pointer;
 }
 h4 {
     font-family: 'Lora', sans-serif;

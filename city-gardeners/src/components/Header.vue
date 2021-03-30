@@ -1,11 +1,11 @@
 <template>
     <header id="header">
-        <img src="logo.png" alt="logo">
-        <h2 class="hidden-sm hidden-xs">City Garderers</h2>
+        <img @click="$emit('landing')" src="logo.png" alt="logo">
+        <h2 @click="$emit('landing')" class="hidden-sm hidden-xs">City Garderers</h2>
         <NavCart />
-        <NavLink minor="Gardening" text="Workshops" />
+        <NavLink @click="$emit('workshop')" minor="Gardening" text="Workshops" />
         <NavLink minor="List Of" text="Products" />
-        <NavLink minor="Hello, User" text="SignUp/SignIn" />
+        <NavLink minor="Hello," text="SignUp/SignIn" />
     </header>
 </template>
 
@@ -38,6 +38,7 @@ var st = $(this).scrollTop();
 <style scoped>
 header {
     position: fixed;
+    top: 0;
     height: 10vh;
     background-color: white;
     padding: 1vh 2vw;
@@ -47,6 +48,7 @@ header {
 }
 img {
     height: 8vh;
+    cursor: pointer;
 }
 h2 {
     position: relative;
@@ -55,5 +57,6 @@ h2 {
     display: inline;
     font-size: 6vh;
     color: green;
+    cursor: pointer;
 }
 </style>

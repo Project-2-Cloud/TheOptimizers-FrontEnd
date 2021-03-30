@@ -1,12 +1,14 @@
 <template>
-  <Header />
-  <Landing />
-  <Footer />
+  <Header @landing="changePage('landing')" @workshop="changePage('workshop')" />
+  <Landing v-if="page === 'landing'" />
+  <WorkShops v-if="page === 'workshop'" />
+  <Footer @landing="changePage('landing')" @workshop="changePage('workshop')" />
 </template>
 
 <script>
 import Header from "./components/Header"
 import Landing from "./components/Landing"
+import WorkShops from "./components/WorkShops"
 import Footer from "./components/Footer"
 
 export default {
@@ -14,7 +16,18 @@ export default {
   components: {
     Header,
     Landing,
+    WorkShops,
     Footer
+  },
+  data() {
+    return {
+      page: 'landing'
+    }
+  },
+  methods: {
+    changePage(change) {
+      this.page = change
+    }
   }
 }
 </script>
