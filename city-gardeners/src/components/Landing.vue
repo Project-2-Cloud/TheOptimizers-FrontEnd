@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div id="title" class="fluid-container">
             <div id="screen"></div>
-            <div id="temp-logo"></div>
+            <img id="logo" src="logo.png" alt="logo">
             <h1>City Gardeneres</h1>
             <p>Fresh Vegetable plucked for you, from the garden in your city.</p>
         </div>
@@ -100,12 +100,10 @@ export default {
     opacity: 0.7;
     z-index: 0;
 }
-#title #temp-logo {
+#title #logo {
     position: relative;
     height: 12vh;
     width: 12vh;
-    background-color: green;
-    border-radius: 50%;
     margin: 7vh auto;
 }
 #title h1 {
