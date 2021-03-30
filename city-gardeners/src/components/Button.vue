@@ -4,7 +4,7 @@
 
 <script>
 
-export default ({
+export default {
     name: 'Button',
     props: {
         text: String
@@ -14,7 +14,7 @@ export default ({
             console.log('Clicked')
         }
     }
-})
+}
 </script>
 
 <style scoped>

@@ -1,14 +1,20 @@
 <template>
+  <Header />
   <Landing />
+  <Footer />
 </template>
 
 <script>
-import Landing from "./components/Landing";
+import Header from "./components/Header"
+import Landing from "./components/Landing"
+import Footer from "./components/Footer"
 
 export default {
   name: 'App',
   components: {
+    Header,
     Landing,
+    Footer
   }
 }
 </script>
