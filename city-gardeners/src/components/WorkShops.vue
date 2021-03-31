@@ -22,7 +22,6 @@ export default {
             document.getElementById("screen").style.visibility = "visible"
             document.getElementById(element).setAttribute('id', 'selected')
             this.lastSelected = id;
-            console.log(this.lastSelected)
         },
         deselect() {
             document.getElementById("screen").style.visibility = "hidden"
