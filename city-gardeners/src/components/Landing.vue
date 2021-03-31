@@ -82,22 +82,6 @@ export default {
         Button,
     }
 }
-
-window.addEventListener("scroll",function() { 
-   $('#about-text')[(window.scrollY > 500)?"fadeIn":"fadeOut"]();
-   $('#fruits')[(window.scrollY > 500)?"fadeIn":"fadeOut"]();
-},false);
-window.addEventListener("scroll",function() { 
-   $('#contact-text')[(window.scrollY > 1200)?"fadeIn":"fadeOut"]();
-   $('#map-container')[(window.scrollY > 1200)?"fadeIn":"fadeOut"]();
-},false);
-window.addEventListener("scroll",function() { 
-   $('.signup-section')[(window.scrollY > 2200)?"fadeIn":"fadeOut"]();
-},false);
-window.addEventListener("scroll",function() { 
-   $('.testi')[(window.scrollY > 3200)?"fadeIn":"fadeOut"]();
-},false);
-
 </script>
 
 <style scoped>
@@ -231,6 +215,19 @@ window.addEventListener("scroll",function() {
     font-family: 'Lora', serif;
     color: white;
     font-size: 1.5vw;
+}
+@media only screen and (max-width: 991px) {
+    #contact-points #contact-text h2 {
+        font-size: 5vw;
+    }
+    #contact-points #contact-text p {
+        font-size: 2.1vw;
+    }
+}
+@media only screen and (max-width: 575px) {
+    #contact-points #contact-text p {
+        font-size: 3vw;
+    }
 }
 
 /* Signup Button Section */

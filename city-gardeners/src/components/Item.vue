@@ -10,15 +10,15 @@
                 <input name="counter" type="number" id="counter" v-model="count">
                 <button type="button" @click="increaseCount()" class="plus">+</button>
             </div><br><br>
-            <select name="pickup" custom-select mr-sm-2>
+            <select name="pickup">
                 <option value="1">Pickup #1</option>
                 <option value="2">Pickup #2</option>
                 <option value="3">Pickup #3</option>
                 <option value="4">Pickup #4</option>
                 <option value="5">Pickup #5</option>
             </select><br><br>
-            <input type="date"><br><br>
-            <input type="time">
+            <input type="date" required><br><br>
+            <input type="time" required>
             <AddToCart id="button" :price="price * count" :key="reRender" />
         </form>
     </div>

@@ -19,8 +19,6 @@
                     <p>&#8226; Partner 3</p>
                     <p>&#8226; Partner 4</p>
                     <p>&#8226; Partner 5</p>
-                    <p>&#8226; Partner 6</p>
-                    <p>&#8226; Partner 7</p>
                 </div>
             </div>
             <div class="col col-md-3 col-sm-6 col-xs-12">
@@ -82,5 +80,21 @@ h4 {
     font-weight: 600;
     color: white;
     text-align: center;
+}
+@media only screen and (max-width: 991px) {
+    h2 {
+        font-size: 5vw;
+    }
+    p {
+        font-size: 2.1vw;
+    }
+    h4 {
+        font-size: 3vw;
+    }
+}
+@media only screen and (max-width: 575px) {
+    p {
+        font-size: 3vw;
+    }
 }
 </style>
