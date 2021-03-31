@@ -14,7 +14,7 @@
         <div id="collapsable-nav" class="collapsable navbar-collapse collapse">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
                 <li><NavLink minor="Hello," text="SignUp/SignIn" /></li>
-                <li><NavLink minor="List Of" text="Products" /></li>
+                <li><NavLink @click="$emit('product')" minor="List Of" text="Products" /></li>
                 <li><NavLink @click="$emit('workshop')" minor="Gardening" text="Workshops" /></li>
                 <li><NavCart /></li>
             </ul>

@@ -1,12 +1,12 @@
 <template>
     <h2 id="workshop-title">Gardening Workshop</h2>
     <div class="row">
-        <Workshop title="Workshop" image="images/9.png" />
-        <Workshop title="Workshop" image="images/10.png" />
-        <Workshop title="Workshop" image="images/11.png" />
-        <Workshop title="Workshop" image="images/12.png" />
-        <Workshop title="Workshop" image="images/13.png" />
-        <Workshop title="Workshop" image="images/14.png" />
+        <Workshop title="Fencing" price="50.00" image="images/Workshops/1.png" />
+        <Workshop title="Beautify" price="49.00" image="images/Workshops/2.png" />
+        <Workshop title="Manure" price="20.00" image="images/Workshops/3.png" />
+        <Workshop title="Plants" price="39.00" image="images/Workshops/4.png" />
+        <Workshop title="Fertilizers" price="99.00" image="images/Workshops/5.png" />
+        <Workshop title="Planting" price="40.00" image="images/Workshops/6.png" />
     </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color: green;
-    font-size: 3vw;
+    font-size: 6vh;
     font-weight: 600;
     margin-top: 15vh;
 }

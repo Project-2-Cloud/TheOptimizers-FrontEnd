@@ -1,7 +1,8 @@
 <template>
-  <Header @landing="changePage('landing')" @workshop="changePage('workshop')" />
+  <Header @landing="changePage('landing')" @workshop="changePage('workshop')" @product="changePage('product')" />
   <Landing v-if="page === 'landing'" />
   <WorkShops v-if="page === 'workshop'" />
+  <Products v-if="page === 'product'" />
   <Footer @landing="changePage('landing')" @workshop="changePage('workshop')" />
 </template>
 
@@ -9,6 +10,7 @@
 import Header from "./components/Header"
 import Landing from "./components/Landing"
 import WorkShops from "./components/WorkShops"
+import Products from "./components/Products"
 import Footer from "./components/Footer"
 
 export default {
@@ -17,6 +19,7 @@ export default {
     Header,
     Landing,
     WorkShops,
+    Products,
     Footer
   },
   data() {

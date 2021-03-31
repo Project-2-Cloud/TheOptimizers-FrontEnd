@@ -1,6 +1,6 @@
 <template>
     <div id="workshop" class="col-md-4 col-sm-6 col-xs-12">
-        <h4>{{ title }}</h4>
+        <h4>{{ title }} <span id="workshop-price">$ {{ price }}</span></h4>
         <img :src=image alt="">
     </div>    
 </template>
@@ -10,6 +10,7 @@ export default {
     name: 'Workshop',
     props: {
         title: String,
+        price: Number,
         image: String,
     }
 }
@@ -25,6 +26,10 @@ export default {
     color: green;
     font-size: 3vh;
     font-weight: 600;
+}
+#workshop-price {
+    float: right;
+    margin-right: 10vh;
 }
 #workshop img {
     height: 20vw;
