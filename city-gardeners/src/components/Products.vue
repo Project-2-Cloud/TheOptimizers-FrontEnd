@@ -3,7 +3,7 @@
         <h2 id="product-title">Our Products</h2>
         <div id="screen" @click="deselect()" class="container-fluid"></div>
         <div class="row">
-            <Item :id="'product' + item.id" @item-select="selectItem(item.id)" :key="item.id" v-for="item in items" :title="item.title" :price="item.price" :image="item.image" />
+            <Item @add-product="addProduct" :id="'product' + item.id" @item-select="selectItem(item.id)" :key="item.id" v-for="item in items" :title="item.title" :price="item.price" :image="item.image" />
         </div>
         <Sellers :sellers="items[lastSelected].sellers" v-if="selected" />
     </div>
@@ -24,6 +24,23 @@ export default {
             items: [],
             lastSelected: null,
             selected: false
+        }
+    },
+    methods: {
+        addProduct(item) {
+            this.$emit('add-product', item)
+        },
+        selectItem(id) {
+            var element = "product"+id
+            document.getElementById("screen").style.visibility = "visible"
+            document.getElementById(element).setAttribute('id', 'selected')
+            this.lastSelected = id;
+            this.selected = true
+        },
+        deselect() {
+            document.getElementById("screen").style.visibility = "hidden"
+            document.getElementById("selected").setAttribute('id', "product"+this.lastSelected)
+            this.selected = false
         }
     },
     created() {
@@ -96,20 +113,6 @@ export default {
             },
         ]
     },
-    methods: {
-        selectItem(id) {
-            var element = "product"+id
-            document.getElementById("screen").style.visibility = "visible"
-            document.getElementById(element).setAttribute('id', 'selected')
-            this.lastSelected = id;
-            this.selected = true
-        },
-        deselect() {
-            document.getElementById("screen").style.visibility = "hidden"
-            document.getElementById("selected").setAttribute('id', "product"+this.lastSelected)
-            this.selected = false
-        }
-    }
 }
 </script>
 

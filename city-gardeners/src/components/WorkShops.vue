@@ -3,7 +3,7 @@
         <h2 id="workshop-title">Gardening Workshops</h2>
         <div id="screen" @click="deselect()" class="container-fluid"></div>
         <div class="row">
-            <Workshop :id="'workshop' + workshop.id" :key="workshop.id" v-for="workshop in workshops" @workshop-select="selectWorkshop(workshop.id)" :title="workshop.title" :price="workshop.price" :image="workshop.image" />
+            <Workshop @add-workshop="addWorkshop" :id="'workshop' + workshop.id" :key="workshop.id" v-for="workshop in workshops" @workshop-select="selectWorkshop(workshop.id)" :title="workshop.title" :price="workshop.price" :image="workshop.image" />
         </div>
     </div>
 </template>
@@ -17,6 +17,10 @@ export default {
         Workshop
     },
     methods: {
+        addWorkshop(item) {
+            console.log(item)
+            this.$emit('add-workshop', item)
+        },
         selectWorkshop(id) {
             var element = "workshop"+id
             document.getElementById("screen").style.visibility = "visible"

@@ -1,5 +1,5 @@
 <template>
-    <button>$ {{ price }}, Add to Cart</button>
+    <input type="submit" :value="'$ '+price+', Add to Cart'">
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped>
-button {
+input {
     background: #00B8DE;
     width: 30vh;
     height: 6vh;

@@ -1,9 +1,9 @@
 <template>
-    <div id="workshop" class="col-md-4 col-sm-6 col-xs-12">
+    <form @submit="onSubmit" id="workshop" class="col-md-4 col-sm-6 col-xs-12">
         <h4>{{ title }} <span id="workshop-price">$ {{ price }}</span></h4>
         <img @click="$emit('workshop-select')" :src=image alt="">
         <AddToCart id="button" :price="price" />
-    </div>    
+    </form>    
 </template>
 
 <script>
@@ -18,6 +18,19 @@ export default {
     },
     components: {
         AddToCart,
+    },
+    methods: {
+        onSubmit(e) {
+            e.preventDefault()
+            const newProduct = {
+                type: "workshop",
+                image: this.image,
+                name: this.title,
+                price: this.price,
+            }
+
+            this.$emit('add-workshop', newProduct)
+        }
     }
 }
 </script>

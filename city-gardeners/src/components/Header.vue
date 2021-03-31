@@ -16,7 +16,7 @@
                 <li><NavLink minor="Hello," text="SignUp/SignIn" /></li>
                 <li><NavLink @click="$emit('product')" minor="List Of" text="Products" /></li>
                 <li><NavLink @click="$emit('workshop')" minor="Gardening" text="Workshops" /></li>
-                <li><NavCart /></li>
+                <li><NavCart :cart="cart" /></li>
             </ul>
         </div>
     </header>
@@ -28,6 +28,9 @@ import NavCart from "./NavCart"
 
 export default {
     name: 'Header',
+    props: {
+        cart: Array
+    },
     components: {
         NavLink,
         NavCart,

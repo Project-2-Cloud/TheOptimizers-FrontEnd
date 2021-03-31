@@ -3,22 +3,22 @@
         <h4 id="item-title">{{ title }}</h4>
         <h4 id="item-price">$ {{ price }}</h4>
         <img @click="$emit('item-select')" :src=image alt="">
-        <form id="options">
+        <form @submit="onSubmit" id="options">
             <label for="counter">$ {{ price }}&emsp;X&emsp;</label>
             <div class="number-input">
                 <button type="button" @click="decreaseCount()" class="minus">-</button>
                 <input name="counter" type="number" id="counter" v-model="count">
                 <button type="button" @click="increaseCount()" class="plus">+</button>
             </div><br><br>
-            <select name="pickup">
+            <select v-model="pickup" name="pickup">
                 <option value="1">Pickup #1</option>
                 <option value="2">Pickup #2</option>
                 <option value="3">Pickup #3</option>
                 <option value="4">Pickup #4</option>
                 <option value="5">Pickup #5</option>
             </select><br><br>
-            <input type="date" required><br><br>
-            <input type="time" required>
+            <input type="date" v-model="date"><br><br>
+            <input type="time" v-model="time">
             <AddToCart id="button" :price="price * count" :key="reRender" />
         </form>
     </div>
@@ -37,7 +37,10 @@ export default {
     data() {
         return {
             count: 1,
-            reRender: 0
+            reRender: 0,
+            pickup: '',
+            date: '',
+            time: ''
         }
     },
     methods: {
@@ -50,6 +53,34 @@ export default {
                 this.count -= 1
                 this.reRender += 1
             }
+        },
+        onSubmit(e) {
+            e.preventDefault()
+            if (!this.pickup) {
+                alert('Please add a pickup')
+                return
+            }
+            if (!this.date) {
+                alert('Please add a date')
+                return
+            }
+            if (!this.time) {
+                alert('Please add a time')
+                return
+            }
+            const newProduct = {
+                type: "product",
+                count: this.count,
+                pickup: this.pickup,
+                date: this.date,
+                time: this.time,
+                price: this.price * this.count
+            }
+
+            this.$emit('add-product', newProduct)
+            this.count = 1
+            this.date = ''
+            this.time = ''
         }
     },
     components: {
