@@ -1,5 +1,5 @@
 <template>
-    <div id="item" class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-6 col-xs-12">
         <h4 id="item-title">{{ title }}</h4>
         <h4 id="item-price">$ {{ price }}</h4>
         <img @click="$emit('item-select')" :src=image alt="">
@@ -59,6 +59,10 @@ export default {
 </script>
 
 <style scoped>
+.col-md-4 {
+    height: 70vh;
+    overflow: hidden;
+}
 h4 {
     position: absolute;
     font-family: 'Lora', serif;

@@ -5,20 +5,25 @@
         <div class="row">
             <Item :id="'product' + item.id" @item-select="selectItem(item.id)" :key="item.id" v-for="item in items" :title="item.title" :price="item.price" :image="item.image" />
         </div>
+        <Sellers :sellers="items[lastSelected].sellers" v-if="selected" />
     </div>
 </template>
 
 <script>
 import Item from "./Item"
+import Sellers from "./Sellers"
 
 export default {
     name: 'Products',
     components: {
         Item,
+        Sellers,
     },
     data() {
         return {
-            items: []
+            items: [],
+            lastSelected: null,
+            selected: false
         }
     },
     created() {
@@ -28,18 +33,66 @@ export default {
                 title: "Carrots",
                 price: 2.0,
                 image: "images/Products/carrot.png",
+                sellers: [
+                    {
+                        id: 0,
+                        name: "Rachael",
+                        image: "https://source.unsplash.com/200x200/?women",
+                        quantity: 10,
+                        stars: 4
+                    },
+                    {
+                        id: 1,
+                        name: "Mark",
+                        image: "https://source.unsplash.com/200x200/?man",
+                        quantity: 2,
+                        stars: 3
+                    },
+                    {
+                        id: 2,
+                        name: "M. Hudson",
+                        image: "https://source.unsplash.com/201x201/?women",
+                        quantity: 5,
+                        stars: 2
+                    },
+                ]
             },
             {
                 id: 1,
                 title: "Tomatoes",
                 price: 1.5,
                 image: "images/Products/tomato.png",
+                sellers: [
+                    {
+                        id: 0,
+                        name: "Rachael",
+                        image: "https://source.unsplash.com/200x200/?women",
+                        quantity: 10,
+                        stars: 4
+                    },
+                    {
+                        id: 1,
+                        name: "Mark",
+                        image: "https://source.unsplash.com/200x200/?man",
+                        quantity: 2,
+                        stars: 3
+                    },
+                ]
             },
             {
                 id: 2,
                 title: "Potatoes",
                 price: 1.5,
                 image: "images/Products/potato.png",
+                sellers: [
+                    {
+                        id: 0,
+                        name: "Rachael",
+                        image: "https://source.unsplash.com/200x200/?women",
+                        quantity: 10,
+                        stars: 4
+                    },
+                ]
             },
         ]
     },
@@ -49,10 +102,12 @@ export default {
             document.getElementById("screen").style.visibility = "visible"
             document.getElementById(element).setAttribute('id', 'selected')
             this.lastSelected = id;
+            this.selected = true
         },
         deselect() {
             document.getElementById("screen").style.visibility = "hidden"
             document.getElementById("selected").setAttribute('id', "product"+this.lastSelected)
+            this.selected = false
         }
     }
 }
@@ -73,7 +128,7 @@ export default {
     margin-top: 15vh;
 }
 .row {
-    margin: 10vh 0;
+    margin: 10vh 0 0 0;
     text-align: center;
 }
 #screen {
