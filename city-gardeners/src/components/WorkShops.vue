@@ -1,12 +1,14 @@
 <template>
-    <h2 id="workshop-title">Gardening Workshop</h2>
-    <div class="row">
-        <Workshop title="Fencing" price="50.00" image="images/Workshops/1.png" />
-        <Workshop title="Beautify" price="49.00" image="images/Workshops/2.png" />
-        <Workshop title="Manure" price="20.00" image="images/Workshops/3.png" />
-        <Workshop title="Plants" price="39.00" image="images/Workshops/4.png" />
-        <Workshop title="Fertilizers" price="99.00" image="images/Workshops/5.png" />
-        <Workshop title="Planting" price="40.00" image="images/Workshops/6.png" />
+    <div id="workshop" class="container-fluid">
+        <h2 id="workshop-title">Gardening Workshops</h2>
+        <div class="row">
+            <Workshop title="Fencing" price="50.00" image="images/Workshops/1.png" />
+            <Workshop title="Beautify" price="49.00" image="images/Workshops/2.png" />
+            <Workshop title="Manure" price="20.00" image="images/Workshops/3.png" />
+            <Workshop title="Plants" price="39.00" image="images/Workshops/4.png" />
+            <Workshop title="Fertilizers" price="99.00" image="images/Workshops/5.png" />
+            <Workshop title="Planting" price="40.00" image="images/Workshops/6.png" />
+        </div>
     </div>
 </template>
 
@@ -22,6 +24,9 @@ export default {
 </script>
 
 <style scoped>
+#workshop {
+    background-color: #FFE;
+}
 #workshop-title {
     text-align: center;
     position: relative;

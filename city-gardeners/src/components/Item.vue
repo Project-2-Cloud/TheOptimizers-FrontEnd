@@ -24,7 +24,7 @@ export default {
     color: white;
     font-size: 4vh;
     font-weight: 400;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 5px black;
 }
 #item #item-title {
     top: 20vw;

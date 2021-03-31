@@ -29,7 +29,7 @@ export default {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    color: green;
+    color: lightgreen;
     font-size: 6vh;
     font-weight: 600;
     margin-top: 15vh;
