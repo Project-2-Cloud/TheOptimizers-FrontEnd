@@ -1,11 +1,24 @@
 <template>
     <header id="header">
-        <img @click="$emit('landing')" src="logo.png" alt="logo">
-        <h2 @click="$emit('landing')" class="hidden-sm hidden-xs">City Garderers</h2>
-        <NavCart />
-        <NavLink @click="$emit('workshop')" minor="Gardening" text="Workshops" />
-        <NavLink minor="List Of" text="Products" />
-        <NavLink minor="Hello," text="SignUp/SignIn" />
+        <div class="navbar-header">
+            <img @click="$emit('landing')" src="logo.png" alt="logo">
+            <h2 @click="$emit('landing')" class="hidden-sm hidden-xs">City Garderers</h2>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" id="navbar-button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="collapsable-nav" class="collapsable navbar-collapse collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+                <li><NavLink minor="Hello," text="SignUp/SignIn" /></li>
+                <li><NavLink minor="List Of" text="Products" /></li>
+                <li><NavLink @click="$emit('workshop')" minor="Gardening" text="Workshops" /></li>
+                <li><NavCart /></li>
+            </ul>
+        </div>
     </header>
 </template>
 
@@ -51,12 +64,26 @@ img {
     cursor: pointer;
 }
 h2 {
-    position: relative;
-    top: 20%;
-    margin-left: 1vw;
+    position: absolute;
+    top: 2.5vh;
+    margin: 0 1vw;
     display: inline;
     font-size: 6vh;
     color: green;
     cursor: pointer;
+}
+#navbar-button {
+    background-color: green;
+    height: 6vh;
+    width: 6vh;
+}
+#navbar-button .icon-bar {
+    background: white;
+    height: 10%;
+    width: 100%;
+}
+ul {
+    margin: 0;
+    background: white;
 }
 </style>

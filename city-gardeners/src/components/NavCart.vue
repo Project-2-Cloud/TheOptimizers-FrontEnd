@@ -12,6 +12,6 @@ export default {
 #cart {
     height: 6vh;
     margin-top: 1vh;
-    float: right;
+    margin-left: 2.5vw;
 }
 </style>

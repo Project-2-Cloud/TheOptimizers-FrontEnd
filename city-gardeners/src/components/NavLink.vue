@@ -17,11 +17,9 @@ export default {
 
 <style scoped>
 #link {
-    float: right;
     color: green;
     text-decoration: none;
-    margin-right: 2.5vw;
-    margin-top: 3vh;
+    margin: 3vh 0 0 2.5vw;
     cursor: pointer;
 }
 #link h5 {
