@@ -1,9 +1,10 @@
 <template>
-  <Header :key="reRender" :cart="cart" @landing="changePage('landing')" @workshop="changePage('workshop')" @product="changePage('product')" />
+  <Header :key="reRender" :cartLen="cart.length" @change="changePage" />
   <Landing v-if="page === 'landing'" />
   <WorkShops v-if="page === 'workshop'" @add-workshop="addCart" />
   <Products v-if="page === 'product'" @add-product="addCart" />
-  <Footer @landing="changePage('landing')" @workshop="changePage('workshop')" />
+  <Cart :cart="cart" v-if="page === 'cart'" />
+  <Footer @change="changePage" />
 </template>
 
 <script>
@@ -11,6 +12,7 @@ import Header from "./components/Header"
 import Landing from "./components/Landing"
 import WorkShops from "./components/WorkShops"
 import Products from "./components/Products"
+import Cart from "./components/Cart"
 import Footer from "./components/Footer"
 
 export default {
@@ -20,6 +22,7 @@ export default {
     Landing,
     WorkShops,
     Products,
+    Cart,
     Footer
   },
   data() {
@@ -32,7 +35,6 @@ export default {
   methods: {
     addCart(item) {
       this.cart = [...this.cart, item]
-      console.log(JSON.stringify(this.cart))
       this.reRender += 1
     },
     changePage(change) {

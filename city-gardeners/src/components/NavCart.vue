@@ -1,13 +1,15 @@
 <template>
-    <img id="cart" src="images/cart.png" alt="cart">
-    <p v-if="cart.length > 0">{{ cart.length }}</p>
+    <div>
+        <img id="cart" src="images/cart.png" alt="cart">
+        <p v-if="cartLen > 0">{{ cartLen }}</p>
+    </div>
 </template>
 
 <script>
 export default {
     name: 'NavCart',
     props: {
-        cart: Array
+        cartLen: Number
     },
     data() {
         return {
@@ -22,6 +24,7 @@ export default {
     height: 6vh;
     margin-top: 1vh;
     margin-left: 2.5vw;
+    cursor: pointer;
 }
 p {
     position: absolute;

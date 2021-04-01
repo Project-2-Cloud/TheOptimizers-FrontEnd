@@ -70,6 +70,8 @@ export default {
             }
             const newProduct = {
                 type: "product",
+                image: this.image,
+                name: this.title,
                 count: this.count,
                 pickup: this.pickup,
                 date: this.date,

@@ -18,7 +18,6 @@ export default {
     },
     methods: {
         addWorkshop(item) {
-            console.log(item)
             this.$emit('add-workshop', item)
         },
         selectWorkshop(id) {

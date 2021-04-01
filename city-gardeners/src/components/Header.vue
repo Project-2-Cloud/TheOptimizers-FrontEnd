@@ -1,8 +1,8 @@
 <template>
     <header id="header">
         <div class="navbar-header">
-            <img @click="$emit('landing')" src="logo.png" alt="logo">
-            <h2 @click="$emit('landing')" class="hidden-sm hidden-xs">City Garderers</h2>
+            <img @click="$emit('change', 'landing')" src="logo.png" alt="logo">
+            <h2 @click="$emit('change', 'landing')" class="hidden-sm hidden-xs">City Garderers</h2>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" id="navbar-button">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -14,9 +14,9 @@
         <div id="collapsable-nav" class="collapsable navbar-collapse collapse">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
                 <li><NavLink minor="Hello," text="SignUp/SignIn" /></li>
-                <li><NavLink @click="$emit('product')" minor="List Of" text="Products" /></li>
-                <li><NavLink @click="$emit('workshop')" minor="Gardening" text="Workshops" /></li>
-                <li><NavCart :cart="cart" /></li>
+                <li><NavLink @click="$emit('change', 'product')" minor="List Of" text="Products" /></li>
+                <li><NavLink @click="$emit('change', 'workshop')" minor="Gardening" text="Workshops" /></li>
+                <li><NavCart @click="$emit('change', 'cart')" :cartLen="cartLen" /></li>
             </ul>
         </div>
     </header>
@@ -29,7 +29,7 @@ import NavCart from "./NavCart"
 export default {
     name: 'Header',
     props: {
-        cart: Array
+        cartLen: Number
     },
     components: {
         NavLink,
