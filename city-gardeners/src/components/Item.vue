@@ -75,6 +75,7 @@ export default {
             count: 1,
             reRender: 0,
             pickup: '',
+            pickuploc: '',
             date: '',
             time: ''
         }

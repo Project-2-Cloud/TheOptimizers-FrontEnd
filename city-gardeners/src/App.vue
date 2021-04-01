@@ -4,6 +4,7 @@
     <Landing v-if="page === 'landing'" />
     <WorkShops v-if="page === 'workshop'" @add-workshop="addCart" />
     <Products v-if="page === 'product'" @add-product="addCart" />
+    <Customer v-if="page == 'customer'" />
     <Cart :cart="cart" v-if="page === 'cart'" />
     <Footer @change="changePage" />
   </div>
@@ -14,6 +15,7 @@ import Header from "./components/NavHeader"
 import Landing from "./components/Landing"
 import WorkShops from "./components/WorkShops"
 import Products from "./components/Products"
+import Customer from "./components/Customer"
 import Cart from "./components/Cart"
 import Footer from "./components/Footer"
 
@@ -24,6 +26,7 @@ export default {
     Landing,
     WorkShops,
     Products,
+    Customer,
     Cart,
     Footer
   },

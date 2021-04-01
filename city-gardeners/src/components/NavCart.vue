@@ -29,7 +29,8 @@ export default {
 p {
     position: absolute;
     top: 0;
-    left: 10vh;
+    padding-top: 0.5vh;
+    right: -1vh;
     border-radius: 50%;
     background-color: red;
     height: 3vh;

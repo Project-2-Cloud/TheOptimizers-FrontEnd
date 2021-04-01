@@ -4,10 +4,9 @@
             <div class="col col-md-3 col-sm-6 col-xs-12">
                 <div>
                     <h2>Navigate</h2>
-                    <p>&#8226; Create a New Account</p>
-                    <p>&#8226; Log-In into your Account</p>
                     <p @click="$emit('change', 'product')">&#8226; View Products</p>
                     <p @click="$emit('change', 'workshop')">&#8226; Gardening Workshops</p>
+                    <p @click="$emit('change', 'customer')">&#8226; Customer Self</p>
                     <p @click="$emit('change', 'cart')">&#8226; Checkout</p>
                 </div>
             </div>

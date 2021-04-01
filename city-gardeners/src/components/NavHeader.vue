@@ -2,9 +2,10 @@
     <header id="header">
         <div class="navbar-header">
             <img @click="$emit('change', 'landing')" src="logo.png" alt="logo">
-            <h2 @click="$emit('change', 'landing')" class="hidden-sm hidden-xs">City Garderers</h2>
+            <h2 @click="$emit('change', 'landing')" class="hidden-md hidden-sm hidden-xs">City Garderers</h2>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" id="navbar-button">
                 <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -30,6 +31,7 @@
               </li>
               <li><a class="navLink" @click="$emit('change', 'product')"><NavLink minor="List Of" text="Products" /></a></li>
               <li><a class="navLink" @click="$emit('change', 'workshop')"><NavLink minor="Gardening" text="Workshops" /></a></li>
+              <li><a class="navLink" @click="$emit('change', 'customer')"><NavLink minor="Need Help?" text="Support" /></a></li>
               <li><a class="navLink" @click="$emit('change', 'cart')"><NavCart :cartLen="cartLen" /></a></li>
             </ul>
         </div>
