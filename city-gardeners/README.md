@@ -1,4 +1,4 @@
-# optimisers_vue_frontend
+# shopping-cart
 
 ## Project setup
 ```

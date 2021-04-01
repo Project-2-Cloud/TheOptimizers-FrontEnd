@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Header from "./components/Header"
+import Header from "./components/NavHeader"
 import Landing from "./components/Landing"
 import WorkShops from "./components/WorkShops"
 import Products from "./components/Products"

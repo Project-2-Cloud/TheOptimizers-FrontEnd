@@ -1,8 +1,8 @@
 <template>
-    <a id="link">
+    <div id="link">
         <p>{{ minor }}</p>
         <h5>{{ text }}</h5>
-    </a>
+    </div>
 </template>
 
 <script>
