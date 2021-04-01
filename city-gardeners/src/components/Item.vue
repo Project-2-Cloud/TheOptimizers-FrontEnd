@@ -33,6 +33,7 @@ export default {
         title: String,
         price: Number,
         image: String,
+        max: Number
     },
     data() {
         return {
@@ -45,8 +46,10 @@ export default {
     },
     methods: {
         increaseCount() {
-            this.count += 1
-            this.reRender += 1
+            if (this.count < this.max) {
+                this.count += 1
+                this.reRender += 1
+            }
         },
         decreaseCount() {
             if (this.count > 1) {

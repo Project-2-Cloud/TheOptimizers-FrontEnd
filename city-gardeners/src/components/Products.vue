@@ -3,7 +3,7 @@
         <h2 id="product-title">Our Products</h2>
         <div id="screen" @click="deselect()" class="container-fluid"></div>
         <div class="row">
-            <Item @add-product="addProduct" :id="'product' + item.id" @item-select="selectItem(item.id)" :key="item.id" v-for="item in items" :title="item.title" :price="item.price" :image="item.image" />
+            <Item @add-product="addProduct" :id="'product' + item.id" @item-select="selectItem(item.id)" :key="item.id" v-for="item in items" :title="item.title" :price="item.price" :image="item.image" :max="returnMax(item.sellers)" />
         </div>
         <Sellers :sellers="items[lastSelected].sellers" v-if="selected" />
     </div>
@@ -27,6 +27,15 @@ export default {
         }
     },
     methods: {
+        returnMax(sellers) {
+            var max = 0
+            for(var i = 0; i < sellers.length; ++i) {
+                if(sellers[i].quantity > max) {
+                    max = sellers[i].quantity
+                }
+            }
+            return max
+        },
         addProduct(item) {
             this.$emit('add-product', item)
         },
