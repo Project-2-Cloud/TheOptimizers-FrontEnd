@@ -1,25 +1,37 @@
 <template>
-    <header id="header">
-        <div class="navbar-header">
-            <img @click="$emit('change', 'landing')" src="logo.png" alt="logo">
-            <h2 @click="$emit('change', 'landing')" class="hidden-sm hidden-xs">City Garderers</h2>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" id="navbar-button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<header id="header">
+  <div class="navbar-header">
+    <img @click="$emit('change', 'landing')" src="logo.png" alt="logo">
+      <h2 @click="$emit('change', 'landing')" class="hidden-sm hidden-xs">City Garderers</h2>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" id="navbar-button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+  </div>
+  <div id="collapsabla-nav" class="collapsable navbar-collapse collapse">
+    <ul id="nav-list" class="nav navbar-nav navbar-right">
+      <router-link to="/" tag="li" v-if="!isAuthenticated" class="nav-item" active-class="active">
+        <a @click="onLoginClicked" class="nav-link">Login</a>
+      </router-link>
+      <li v-if="isAuthenticated" class="li-pointer nav-item">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ getUserName() }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
+          </div>
         </div>
-        <div id="collapsable-nav" class="collapsable navbar-collapse collapse">
-            <ul id="nav-list" class="nav navbar-nav navbar-right">
-                <li><NavLink minor="Hello," text="SignUp/SignIn" /></li>
-                <li><NavLink @click="$emit('change', 'product')" minor="List Of" text="Products" /></li>
-                <li><NavLink @click="$emit('change', 'workshop')" minor="Gardening" text="Workshops" /></li>
-                <li><NavCart @click="$emit('change', 'cart')" :cartLen="cartLen" /></li>
-            </ul>
-        </div>
-    </header>
+      </li>
+      <li><NavLink @click="$emit('change', 'product')" minor="List Of" text="Products" /></li>
+      <li><NavLink @click="$emit('change', 'workshop')" minor="Gardening" text="Workshops" /></li>
+      <li><NavCart @click="$emit('change', 'cart')" :cartLen="cartLen" /></li>
+    </ul>
+  </div>
+</header>
 </template>
 
 <script>
@@ -27,16 +39,40 @@ import NavLink from "./NavLink"
 import NavCart from "./NavCart"
 
 export default {
-    name: 'Header',
-    props: {
-        cartLen: Number
+  components: { 
+    NavLink,
+    NavCart,
+  },
+  name: 'NavHeader',
+  computed: {
+    userEmail() {
+      return this.isLoggedIn ? this.currentUser.email : ''
     },
-    components: {
-        NavLink,
-        NavCart,
+    isAuthenticated() {
+      return this.$store.state.user.isAuthenticated;
+    },
+    isPartner() {
+      return this.$store.state.user.partner;
+    },
+  },
+  methods: {
+    onLoginClicked() {
+      window.location = this.$store.state.endpoints.login;
+    },
+    onLogoutClicked() {
+      this.$store.commit("logout");
+    },
+    onRegisterClicked() {
+      let obj = { 'description': 'description', 'id': parseInt("1"), 'price': parseInt("1000"), 'quantity': parseInt("10"), 'thumbnail_url': "thumbnail_url", 'title': "title" }
+      this.$store.dispatch("registerProduct", obj);
+    },
+    getUserName() {
+      return this.$store.state.user.name;
     }
+  }
 }
 
+/*
 var lastScrollTop = 0;
 
 $(window).scroll(function () {
@@ -49,6 +85,7 @@ var st = $(this).scrollTop();
     }
     lastScrollTop = st;
 })
+*/
 </script>
 
 <style scoped>
