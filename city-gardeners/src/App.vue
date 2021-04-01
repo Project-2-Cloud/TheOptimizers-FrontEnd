@@ -45,6 +45,10 @@ export default {
     changePage(change) {
       this.page = change
     }
+  },
+  mounted(){
+    this.$store.commit("setUrls");
+    this.$store.dispatch("getProducts");
   }
 }
 </script>
