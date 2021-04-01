@@ -49,6 +49,7 @@ h2 {
     font-size: 6vh;
     font-weight: 600;
     margin-top: 15vh;
+    margin-bottom: 10vh;
 }
 .cart-element {
     margin-top: 2vh;
@@ -84,7 +85,12 @@ h4 {
 }
 #checkout {
     position: absolute;
-    top: 14vh;
+    top: 23vh;
     right: 0.5vw;
+}
+@media only screen and (max-width: 991px) {
+    .details {
+        left: 30vw;
+    }
 }
 </style>

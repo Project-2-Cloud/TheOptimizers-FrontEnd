@@ -5,7 +5,7 @@
             <section>
                 <h2>{{ seller.name }}</h2>
                 <h4>{{ seller.quantity }} kg</h4>
-                <p>{{ seller.stars }}</p>
+                <p>{{ seller.stars }} star rating</p>
             </section>
         </div>
     </div>
