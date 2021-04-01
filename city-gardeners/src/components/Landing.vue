@@ -4,13 +4,13 @@
             <div id="screen"></div>
             <img id="logo" src="logo.png" alt="logo">
             <h1>City Gardeneres</h1>
-            <p>Fresh Vegetable plucked for you, from the garden in your city.</p>
+            <p>Fresh Vegetables plucked for you, from the garden in your city.</p>
         </div>
         <div id="about" class="fluid-container">
             <img class="bg" src="images/2.png" alt="">
             <div id="about-text" class="col-md-5 col-md-push-1 col-xs-8 col-xs-push-2">
                 <h2>About our Initiative</h2>
-                <p>Our initiative is aimed towards helping the environment by enabling hobby gardeners to sell their yields over an online play form which will help them in solving the problem of dealing with high yields of from their garden while making some extra buck at the same time from their hobby. All they have to do is to leave their offering at the contact point from where the consumers can pick it up.</p>
+                <p>Our initiative is aimed towards helping the environment by enabling hobby gardeners to sell their yields over an online platform which will help them in solving the problem of dealing with high yields of from their garden while making some extra buck at the same time from their hobby. All they have to do is to leave their offering at the contact point from where the consumers can pick it up.</p>
             </div>
             <img id="fruits" class="col-md-4 col-md-push-1 col-xs-8 col-xs-push-2" src="images/3.png" alt="fruits and veggies">
         </div>
