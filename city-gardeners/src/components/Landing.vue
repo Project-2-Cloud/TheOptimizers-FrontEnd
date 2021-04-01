@@ -10,7 +10,7 @@
             <img class="bg" src="images/2.png" alt="">
             <div id="about-text" class="col-md-5 col-md-push-1 col-xs-8 col-xs-push-2">
                 <h2>About our Initiative</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec iaculis enim. Maecenas eu augue pharetra, suscipit nisl nec, pellentesque velit. Morbi laoreet, nibh id lacinia condimentum, ex lectus iaculis dolor, a commodo tortor risus non nisi. Sed dictum molestie lorem, vel blandit lacus condimentum vel. Maecenas vitae porttitor diam, et elementum lectus.</p>
+                <p>Our initiative is aimed towards helping the environment by enabling hobby gardeners to sell their yields over an online play form which will help them in solving the problem of dealing with high yields of from their garden while making some extra buck at the same time from their hobby. All they have to do is to leave their offering at the contact point from where the consumers can pick it up.</p>
             </div>
             <img id="fruits" class="col-md-4 col-md-push-1 col-xs-8 col-xs-push-2" src="images/3.png" alt="fruits and veggies">
         </div>
@@ -31,7 +31,7 @@
             <div class="row signup-section">
                 <div class="col-md-6 col-xs-12">
                     <h2>For Customers</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec iaculis enim.</p>
+                    <p>Sign Up for the service, select the product, pickup location and date for the pickup. That's all you have to do before you can add the pickup to your schedule.</p>
                     <Button text="Start Ordering" />
                 </div>
                 <div class="col-md-6 hidden-sm hidden-xs">
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-md-6 col-xs-12">
                     <h2>For Sellers</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec iaculis enim.</p>
+                    <p>Register as a seller, list your yields and till when and where you can drop the products on the contact points. The vegetables should be freshly plucked before dropping it off.</p>
                     <Button text="Start Selling" />
                 </div>
             </div>
@@ -55,18 +55,18 @@
             <div class="row testi">
                 <div class="col-md-4 col-xs-12">
                     <img class="testi-img" src="https://source.unsplash.com/200x200/?man" alt="">
-                    <h4>Crystal Buckner</h4>
-                    <p>Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.</p>
+                    <h4>Emre Kaczka</h4>
+                    <p>The services are very good. It is better to eat fresh fruits and vegetables instead of buying preserved goods in the market.</p>
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <img class="testi-img" src="https://source.unsplash.com/200x200/?women" alt="">
                     <h4>Crystal Buckner</h4>
-                    <p>Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.</p>
+                    <p>I have stopped buying vegetables from the supermarket after I came across this application. #eatfresh</p>
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <img class="testi-img" src="https://source.unsplash.com/201x201/?women" alt="">
-                    <h4>Crystal Buckner</h4>
-                    <p>Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.</p>
+                    <h4>Giorgia Sokolov</h4>
+                    <p>Products are really good and so are the workshops. I recently started hobby farming and the workshops helped me a lot.</p>
                 </div>
             </div>
         </div>

@@ -1,6 +1,9 @@
 <template>
-    <div class="container-fluid">
+    <div id="cart" class="container-fluid">
         <h2>Shopping Cart</h2>
+        <div id="empty" v-if="cart.length === 0">
+            <h1>The shopping cart is empty. Add some things to your cart.</h1>
+        </div>
         <div :key="item.price + Math.random()*100" v-for="item in cart" class="cart-element col-md-8 col-md-push-2 col-xs-12">
             <div class="item" v-if="item.type === 'workshop'">
                 <img :src="item.image" alt="item">
@@ -40,6 +43,16 @@ export default {
 </script>
 
 <style scoped>
+#cart {
+    min-height: 100vh;
+}
+#empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
 h2 {
     text-align: center;
     position: relative;
