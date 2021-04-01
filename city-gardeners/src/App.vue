@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div id="wrapper" class="container-fluid">
     <Header :key="reRender" :cartLen="cart.length" @change="changePage" />
     <Landing v-if="page === 'landing'" />
     <WorkShops v-if="page === 'workshop'" @add-workshop="addCart" />
@@ -63,5 +63,8 @@ html, body {
     transform: translate(-50%, -50%);
     width: auto;
     height: 100vh;
+}
+#wrapper {
+  padding: 0;
 }
 </style>

@@ -14,23 +14,23 @@
         <div id="collapsable-nav" class="collapsable navbar-collapse collapse">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
               <router-link to="/" tag="li" v-if="!isAuthenticated" class="nav-item" active-class="active">
-          <a @click="onLoginClicked" class="nav-link">Login</a>
-        </router-link>
-        <li v-if="isAuthenticated" class="li-pointer nav-item">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ getUserName() }}
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Account Settings</a>
-              <a v-if="isPartner" @click="onRegisterClicked" class="dropdown-item" href="#">Register Product</a>
-              <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
-            </div>
-          </div>
-        </li>
-                <li><NavLink @click="$emit('change', 'product')" minor="List Of" text="Products" /></li>
-                <li><NavLink @click="$emit('change', 'workshop')" minor="Gardening" text="Workshops" /></li>
-                <li><NavCart @click="$emit('change', 'cart')" :cartLen="cartLen" /></li>
+                <a @click="onLoginClicked" class="navLink nav-link"><NavLink minor="Hello," text="SignUp/Login" /></a>
+              </router-link>
+              <li v-if="isAuthenticated" class="li-pointer nav-item">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ getUserName() }}
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Account Settings</a>
+                    <a v-if="isPartner" @click="onRegisterClicked" class="dropdown-item" href="#">Register Product</a>
+                    <a @click="onLogoutClicked" class="dropdown-item">Logout {{ userEmail }}</a>
+                  </div>
+                </div>
+              </li>
+              <li><a class="navLink" @click="$emit('change', 'product')"><NavLink minor="List Of" text="Products" /></a></li>
+              <li><a class="navLink" @click="$emit('change', 'workshop')"><NavLink minor="Gardening" text="Workshops" /></a></li>
+              <li><a class="navLink" @click="$emit('change', 'cart')"><NavCart :cartLen="cartLen" /></a></li>
             </ul>
         </div>
     </header>
@@ -61,6 +61,9 @@ export default {
     },
   },
   methods: {
+    check() {
+      console.log('Check')
+    },
     onLoginClicked() {
       window.location = this.$store.state.endpoints.login;
     },
@@ -115,5 +118,12 @@ h2 {
 ul {
     margin: 0;
     background: white;
+}
+.navLink {
+  text-decoration: none;
+  padding: 0px;
+}
+.navLink:hover {
+  background-color: white;
 }
 </style>

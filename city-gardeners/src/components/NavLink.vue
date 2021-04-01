@@ -21,6 +21,7 @@ export default {
     text-decoration: none;
     margin: 3vh 0 0 2.5vw;
     cursor: pointer;
+    z-index: 10;
 }
 #link h5 {
     font-size: 2vh;
