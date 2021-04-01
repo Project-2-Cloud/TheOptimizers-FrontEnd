@@ -11,11 +11,46 @@
                 <button type="button" @click="increaseCount()" class="plus">+</button>
             </div><br><br>
             <select v-model="pickup" name="pickup">
-                <option value="1">Pickup #1</option>
-                <option value="2">Pickup #2</option>
-                <option value="3">Pickup #3</option>
-                <option value="4">Pickup #4</option>
-                <option value="5">Pickup #5</option>
+                <option value="1">Leuven</option>
+                <option value="2">Mechelen</option>
+                <option value="3">Charleroi</option>
+                <option value="4">Namur</option>
+                <option value="5">Hasset</option>
+            </select><br><br>
+            <select v-if="pickup === '1'" v-model="pickuploc" name="pickuploc">
+                <option value="1">Leuven 1</option>
+                <option value="2">Leuven 2</option>
+                <option value="3">Leuven 3</option>
+                <option value="4">Leuven 4</option>
+                <option value="5">Leuven 5</option>
+            </select><br><br>
+            <select v-if="pickup === '2'" v-model="pickuploc" name="pickuploc">
+                <option value="1">Mechelen 1</option>
+                <option value="2">Mechelen 2</option>
+                <option value="3">Mechelen 3</option>
+                <option value="4">Mechelen 4</option>
+                <option value="5">Mechelen 5</option>
+            </select><br><br>
+            <select v-if="pickup === '3'" v-model="pickuploc" name="pickuploc">
+                <option value="1">Charleroi 1</option>
+                <option value="2">Charleroi 2</option>
+                <option value="3">Charleroi 3</option>
+                <option value="4">Charleroi 4</option>
+                <option value="5">Charleroi 5</option>
+            </select><br><br>
+            <select v-if="pickup === '4'" v-model="pickuploc" name="pickuploc">
+                <option value="1">Namur 1</option>
+                <option value="2">Namur 2</option>
+                <option value="3">Namur 3</option>
+                <option value="4">Namur 4</option>
+                <option value="5">Namur 5</option>
+            </select><br><br>
+            <select v-if="pickup === '5'" v-model="pickuploc" name="pickuploc">
+                <option value="1">Hasset 1</option>
+                <option value="2">Hasset 2</option>
+                <option value="3">Hasset 3</option>
+                <option value="4">Hasset 4</option>
+                <option value="5">Hasset 5</option>
             </select><br><br>
             <input type="date" v-model="date"><br><br>
             <input type="time" v-model="time">
@@ -134,7 +169,7 @@ img:hover {
     color: white;
     font-size: 4vh;
     font-weight: 700;
-    margin-left: 3vh;
+    margin-left: 2vh;
     text-shadow: 1px 1px 5px black;
 }
 input[type="number"] {
@@ -169,6 +204,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   border: 0;
   font-size: 4vh;
 }
+.minus {
+    margin-left: 5vh;
+}
 input[type=date], input[type=time] {
     background: transparent;
     background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
@@ -185,6 +223,8 @@ input[type=date], input[type=time] {
     font-size: 4vh;
     font-weight: 700;
     margin-left: 3vh;
+    position: relative;
+    top: -14vh;
 }
 input[type=time] {
     background: none;
@@ -209,9 +249,14 @@ input[type=time] {
     font-weight: 700;
     margin-left: 3vh;
 }
+select[name=pickuploc] {
+    position: absolute;
+    top: 15vh;
+    left: 12vh;
+}
 #button {
     position: relative;
-    top: 15vh;
+    top: -5vh;
 }
 #selected {
     z-index: 8;
