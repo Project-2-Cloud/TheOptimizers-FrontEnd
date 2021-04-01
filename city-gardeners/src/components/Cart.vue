@@ -24,7 +24,7 @@
                 <br>
             </div>
         </div>
-        <Button id="checkout" text="Checkout" />
+        <Button v-if="cart.length > 0" id="checkout" text="Checkout" />
     </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    white-space: nowrap;
+    text-align: center;
 }
 h2 {
     text-align: center;
