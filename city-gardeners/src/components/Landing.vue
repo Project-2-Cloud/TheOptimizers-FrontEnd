@@ -54,17 +54,17 @@
             <h2 id="testi-text">What our Customers Say</h2>
             <div class="row testi">
                 <div class="col-md-4 col-xs-12">
-                    <img class="testi-img" src="https://source.unsplash.com/200x200/?man" alt="">
+                    <img class="testi-img" src="images/Users/1.png" alt="user">
                     <h4>Emre Kaczka</h4>
                     <p>The services are very good. It is better to eat fresh fruits and vegetables instead of buying preserved goods in the market.</p>
                 </div>
                 <div class="col-md-4 col-xs-12">
-                    <img class="testi-img" src="https://source.unsplash.com/200x200/?women" alt="">
+                    <img class="testi-img" src="images/Users/2.png" alt="user">
                     <h4>Crystal Buckner</h4>
                     <p>I have stopped buying vegetables from the supermarket after I came across this application. #eatfresh</p>
                 </div>
                 <div class="col-md-4 col-xs-12">
-                    <img class="testi-img" src="https://source.unsplash.com/201x201/?women" alt="">
+                    <img class="testi-img" src="images/Users/3.png" alt="user">
                     <h4>Giorgia Sokolov</h4>
                     <p>Products are really good and so are the workshops. I recently started hobby farming and the workshops helped me a lot.</p>
                 </div>

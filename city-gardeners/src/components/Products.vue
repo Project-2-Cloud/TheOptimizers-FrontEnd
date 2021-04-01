@@ -54,21 +54,21 @@ export default {
                     {
                         id: 0,
                         name: "Rachael",
-                        image: "https://source.unsplash.com/200x200/?women",
+                        image: "images/Users/3.png",
                         quantity: 10,
                         stars: 4
                     },
                     {
                         id: 1,
                         name: "Mark",
-                        image: "https://source.unsplash.com/200x200/?man",
+                        image: "images/Users/1.png",
                         quantity: 2,
                         stars: 3
                     },
                     {
                         id: 2,
                         name: "M. Hudson",
-                        image: "https://source.unsplash.com/201x201/?women",
+                        image: "images/Users/2.png",
                         quantity: 5,
                         stars: 2
                     },
@@ -83,14 +83,14 @@ export default {
                     {
                         id: 0,
                         name: "Rachael",
-                        image: "https://source.unsplash.com/200x200/?women",
+                        image: "images/Users/3.png",
                         quantity: 10,
                         stars: 4
                     },
                     {
                         id: 1,
                         name: "Mark",
-                        image: "https://source.unsplash.com/200x200/?man",
+                        image: "images/Users/1.png",
                         quantity: 2,
                         stars: 3
                     },
@@ -105,7 +105,7 @@ export default {
                     {
                         id: 0,
                         name: "Rachael",
-                        image: "https://source.unsplash.com/200x200/?women",
+                        image: "images/Users/3.png",
                         quantity: 10,
                         stars: 4
                     },
