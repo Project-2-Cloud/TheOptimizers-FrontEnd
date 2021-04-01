@@ -5,7 +5,14 @@
             <section>
                 <h2>{{ seller.name }}</h2>
                 <h4>{{ seller.quantity }} kg</h4>
-                <p>{{ seller.stars }} star rating</p>
+                <!-- <p>{{ seller.stars }} star rating</p> -->
+                <div class="rating">
+                    <img class="stars" v-if="seller.stars > 0" src="images/star.png" alt="rating">
+                    <img class="stars" v-if="seller.stars > 1" src="images/star.png" alt="rating">
+                    <img class="stars" v-if="seller.stars > 2" src="images/star.png" alt="rating">
+                    <img class="stars" v-if="seller.stars > 3" src="images/star.png" alt="rating">
+                    <img class="stars" v-if="seller.stars > 4" src="images/star.png" alt="rating">
+                </div>
             </section>
         </div>
     </div>
@@ -69,5 +76,8 @@ h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2vh;
+}
+.stars {
+    height: 3vh;
 }
 </style>

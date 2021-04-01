@@ -1,10 +1,12 @@
 <template>
-  <Header :key="reRender" :cartLen="cart.length" @change="changePage" />
-  <Landing v-if="page === 'landing'" />
-  <WorkShops v-if="page === 'workshop'" @add-workshop="addCart" />
-  <Products v-if="page === 'product'" @add-product="addCart" />
-  <Cart :cart="cart" v-if="page === 'cart'" />
-  <Footer @change="changePage" />
+  <div class="container-fluid">
+    <Header :key="reRender" :cartLen="cart.length" @change="changePage" />
+    <Landing v-if="page === 'landing'" />
+    <WorkShops v-if="page === 'workshop'" @add-workshop="addCart" />
+    <Products v-if="page === 'product'" @add-product="addCart" />
+    <Cart :cart="cart" v-if="page === 'cart'" />
+    <Footer @change="changePage" />
+  </div>
 </template>
 
 <script>
